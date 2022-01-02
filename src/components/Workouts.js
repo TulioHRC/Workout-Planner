@@ -15,7 +15,7 @@ class Workouts extends Component {
     render() {
         const { plans } = this.state
 
-        return (
+        return plans.length != 0 ? (
             <div className='workouts'>
                 {
                     plans.forEach((plan) => {
@@ -24,6 +24,10 @@ class Workouts extends Component {
                         )
                     })
                 }
+            </div>
+        ) : (
+            <div className='workouts'>
+                <img src="Workouts image.png" alt="Image: Create your first workout plan" />
             </div>
         )
     }

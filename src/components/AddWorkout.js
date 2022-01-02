@@ -5,15 +5,13 @@ class AddWorkout extends Component {
     render() {
         const { visibility, closeFunction } = this.props
 
-        if(visibility){
-            return(
-                <div className='popup-box'>
-                    <div className='popup'>
-                        <button onClick={closeFunction}>Close</button>
-                    </div>
+        return visibility ? (
+            <div className='popup-box'>
+                <div className='popup'>
+                    <button onClick={closeFunction}>Close</button>
                 </div>
-            )
-        } else return <></>
+            </div>
+        ) : ( <></> )
     }
 }
 

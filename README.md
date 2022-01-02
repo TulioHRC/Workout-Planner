@@ -8,5 +8,6 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ### 0.0.1v (Basic Home Page)
 - Basic Layout
-- Popup feature
+- Popup feature (with rgb opacity)
 - No workouts image
+- Icon
