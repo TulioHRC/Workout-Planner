@@ -11,3 +11,7 @@ Basically, this will be firstly a site, that will let you create workout session
 - Popup feature (with rgb opacity)
 - No workouts image
 - Icon
+
+Actual layout:
+
+![image](https://user-images.githubusercontent.com/62257920/147887391-72288621-b223-44ae-aee5-3c33183c948b.png)
