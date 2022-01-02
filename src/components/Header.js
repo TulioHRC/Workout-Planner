@@ -28,8 +28,7 @@ class Header extends Component {
             <div className='header'>
                 <Title value={title} />
                 <AddPlanButton addFunction={this.changePopupView} />
-                
-                <AddWorkout visibility={this.state.popupView} />
+                <AddWorkout visibility={this.state.popupView} closeFunction={this.changePopupView} />
             </div>
         )
     }

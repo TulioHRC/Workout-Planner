@@ -1,34 +1,19 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import './styles/AddWorkouts.css'
 
 class AddWorkout extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             
-        }
-    }
-    
-
     render() {
-        return ReactDOM.createPortal(
-            <div className='popup'>
-                <div style={
-                    {
-                        position: 'absolute',
-                        top: '25%',
-                        left: '25%',
-                        width: '50%',
-                        height: '50%',
-                        background: 'white'
-                    }
-                }>
-                    a
-                    {this.props.visibility}
+        const { visibility, closeFunction } = this.props
+
+        if(visibility){
+            return(
+                <div className='popup-box'>
+                    <div className='popup'>
+                        <button onClick={closeFunction}>Close</button>
+                    </div>
                 </div>
-            </div>, document.getElementById('add-workout')
-        )
+            )
+        } else return <></>
     }
 }
 
