@@ -1,19 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './styles/Header.css'
 import Title from './Title'
 import AddPlanButton from './AddPlanButton'
+import AddWorkout from './AddWorkout'
 
 
-const Header = (props) => {
-    const { title } = props
+class Header extends Component {
 
-    return(
-        <div className='header'>
-            <Title value={title} />
-            <AddPlanButton />
-        </div>
-        
-    )
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             popupView: false
+        }
+    }
+
+    changePopupView = () => {
+        this.setState(prevState => {
+            return { popupView: !prevState.popupView }
+        }, () => console.log(this.state.popupView))
+    }    
+
+    render() {
+        const { title } = this.props
+
+        return (
+            <div className='header'>
+                <Title value={title} />
+                <AddPlanButton addFunction={this.changePopupView} />
+                
+                <AddWorkout visibility={this.state.popupView} />
+            </div>
+        )
+    }
 }
 
 export default Header
