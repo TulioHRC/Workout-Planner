@@ -15,7 +15,7 @@ class Workouts extends Component {
     render() {
         const { plans } = this.state
 
-        return plans.length != 0 ? (
+        return plans.length !== 0 ? (
             <div className='workouts'>
                 {
                     plans.forEach((plan) => {

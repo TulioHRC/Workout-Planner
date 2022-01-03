@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './styles/Header.css'
 import Title from './Title'
 import AddPlanButton from './AddPlanButton'
-import AddWorkout from './AddWorkout'
+import AddWorkoutPopup from './AddWorkoutPopup'
 
 
 class Header extends Component {
@@ -18,7 +18,7 @@ class Header extends Component {
     changePopupView = () => {
         this.setState(prevState => {
             return { popupView: !prevState.popupView }
-        }, () => console.log(this.state.popupView))
+        })
     }    
 
     render() {
@@ -28,7 +28,7 @@ class Header extends Component {
             <div className='header'>
                 <Title value={title} />
                 <AddPlanButton addFunction={this.changePopupView} />
-                <AddWorkout visibility={this.state.popupView} closeFunction={this.changePopupView} />
+                <AddWorkoutPopup visibility={this.state.popupView} closeFunction={this.changePopupView} />
             </div>
         )
     }
