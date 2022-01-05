@@ -6,6 +6,10 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ## Log
 
+### 0.2v (Create exercises Popup)
+- Layout
+- Basic features
+
 ### 0.1v (Basic Home Page)
 - Basic Layout
 - Popup feature (with rgb opacity)
