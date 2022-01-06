@@ -11,10 +11,10 @@
 
 .popup {
     position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 50%;
-    height: 60%;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
     background: whitesmoke;
 
     border-radius: 20px;
@@ -28,7 +28,7 @@
     height: 10%;
     color: white;
     background-color: rgb(255, 67, 67);
-    padding: 0 15px;
+    padding: 0 20px;
     border-radius: 10px;
     z-index: 2;
 
@@ -70,6 +70,25 @@
     transform: translateX(2px);
 }
 
+.popup-btn-add {
+    width: 75%;
+    height: 12.5%;
+    background-color: rgb(237, 237, 237);
+    font-size: 22px;
+    border-radius: 16px;
+    border: gray 1px solid;
+
+    cursor: pointer;
+}
+
+.popup-btn-add:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.popup-btn-add:active {
+    background-color: rgb(213, 213, 213);
+    transform: translateX(2px);
+}
 
 .popup-form {
     position: absolute;
