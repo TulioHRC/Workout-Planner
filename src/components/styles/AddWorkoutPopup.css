@@ -126,3 +126,21 @@
 
     overflow-y: scroll;
 }
+
+.popup-workouts-form {
+    width: 75%;
+    height: 12.5%;
+    background-color: gray;
+    font-size: 22px;
+    border-radius: 16px;
+    border: rgb(0, 0, 0) 1px solid;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+
+    position: relative;
+    left: 12.5%;
+}

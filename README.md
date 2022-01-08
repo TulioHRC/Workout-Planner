@@ -6,6 +6,11 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ## Log
 
+### 0.2.1v (Popup Exercise creation logic)
+- Add more exercises in the state
+- Input onChangeHandler
+- Colors onChangeHandler
+
 ### 0.2v (Create exercises Popup)
 - Layout
 - Basic features
