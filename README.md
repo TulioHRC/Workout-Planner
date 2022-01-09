@@ -10,6 +10,7 @@ Basically, this will be firstly a site, that will let you create workout session
 - Add more exercises in the state
 - Input onChangeHandler
 - Colors onChangeHandler
+- Type onChangeHandler
 
 ### 0.2v (Create exercises Popup)
 - Layout
