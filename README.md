@@ -6,6 +6,10 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ## Log
 
+### 0.3v (Basic exercise save)
+- Saving the exercise just in the React logic, but not with any database or cookies
+- Exercise icon in the home page
+
 ### 0.2.1v (Popup Exercise creation logic)
 - Add more exercises in the state
 - Input onChangeHandler

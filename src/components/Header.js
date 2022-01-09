@@ -11,7 +11,7 @@ class Header extends Component {
         super(props)
     
         this.state = {
-             popupView: false
+            popupView: false
         }
     }
 
@@ -19,7 +19,7 @@ class Header extends Component {
         this.setState(prevState => {
             return { popupView: !prevState.popupView }
         })
-    }    
+    }
 
     render() {
         const { title } = this.props
@@ -28,7 +28,7 @@ class Header extends Component {
             <div className='header'>
                 <Title value={title} />
                 <AddPlanButton addFunction={this.changePopupView} />
-                <AddWorkoutPopup visibility={this.state.popupView} closeFunction={this.changePopupView} />
+                <AddWorkoutPopup visibility={this.state.popupView} closeFunction={this.changePopupView} addFunction={this.props.addFunction} />
             </div>
         )
     }

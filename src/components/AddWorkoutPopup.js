@@ -4,8 +4,15 @@ import Form from './popup-features/Form'
 import WorkoutCreation from './popup-features/WorkoutCreation'
 
 class AddWorkoutPopup extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.SerieRef = React.createRef()
+    }
+    
+
     render() {
-        const { visibility, closeFunction } = this.props
+        const { visibility, closeFunction, addFunction } = this.props
 
         return visibility ? (
             <div className='popup-box'>
@@ -13,8 +20,8 @@ class AddWorkoutPopup extends Component {
                     <button className='popup-btn-close' onClick={closeFunction}>X</button>
                     <Form />
                     <p className='popup-text'>Workouts Series</p>
-                    <WorkoutCreation />
-                    <button className='popup-btn-create'>Create</button>
+                    <WorkoutCreation ref={this.SerieRef} />
+                    <button className='popup-btn-create' onClick={() => addFunction(this.SerieRef.current.state)}>Create</button>
                 </div>
             </div>
         ) : ( <></> )

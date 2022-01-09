@@ -2,25 +2,18 @@ import React, { Component } from 'react'
 import './styles/Workouts.css'
 
 
-class Workouts extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             plans: []
-        }
-    }
-    
-
+class Workouts extends Component { 
     render() {
-        const { plans } = this.state
+        const { plans } = this.props
+
+        console.log(plans[0].serie)
 
         return plans.length !== 0 ? (
             <div className='workouts'>
                 {
-                    plans.forEach((plan) => {
+                    plans.map((plan) => {
                         return (
-                            <p>plan.name</p>
+                            <p>{plan.count}</p>
                         )
                     })
                 }
