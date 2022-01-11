@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import './styles/Workouts.css'
+import WorkoutArea from './WorkoutArea'
 
 
 class Workouts extends Component { 
     render() {
         const { plans } = this.props
 
-        console.log(plans[0].serie)
-
         return plans.length !== 0 ? (
             <div className='workouts'>
                 {
                     plans.map((plan) => {
                         return (
-                            <p>{plan.count}</p>
+                            <WorkoutArea serie={plan.serie} count={plan.count} name={plan.name} />
                         )
                     })
                 }

@@ -13,10 +13,12 @@ class App extends Component {
     }
   }
   
-  addPlan = (serie) => {
+  addPlan = (serie, name) => {
+    serie["name"] = name
+
     this.setState(prevState => ({
         plans: [...prevState.plans, serie]
-    }), () => console.log(this.state.plans))
+    }))
   }   
 
   render() {

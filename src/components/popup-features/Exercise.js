@@ -1,12 +1,12 @@
 import React from 'react'
 
 function Exercise(props) {
-    let numInput = props.type == 'Timer' ? <div>
+    let numInput = props.type === 'Timer' ? <div>
         <label htmlFor="numInput">Seconds:</label>
-        <input type="number" id='numInput' min='0' max='99999' step='5' />
+        <input type="number" id='numInput' min='1' max='99999' step='5' />
     </div> : <div>
         <label htmlFor="numInput">Quantity:</label>
-        <input type="number" id='numInput' min='0' />
+        <input type="number" id='numInput' min='1' />
     </div>
 
     return (

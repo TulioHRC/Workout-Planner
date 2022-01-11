@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 
 class Form extends Component {
     render() {
+        const { changeHandler } = this.props
+
         return (
             <div className='popup-form'>
-                <input className='popup-form-input' type="text" maxLength="20" placeholder='Workout plan name' />
+                <input className='popup-form-input' type="text" minLength="3" maxLength="20" placeholder='Workout plan name' onChange={(e) => changeHandler(e)} />
             </div>
         )
     }
