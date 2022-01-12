@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './styles/Workouts.css'
-import WorkoutArea from './WorkoutArea'
+import WorkoutArea from './WorkoutsArea'
 
 
 class Workouts extends Component { 

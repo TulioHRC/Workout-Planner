@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './styles/AddWorkoutPopup.css'
-import Form from './popup-features/Form'
-import WorkoutCreation from './popup-features/WorkoutCreation'
+import '../styles/AddWorkoutPopup.css'
+import Form from './Form'
+import WorkoutCreation from './WorkoutCreation'
 
 class AddWorkoutPopup extends Component {
     constructor(props) {

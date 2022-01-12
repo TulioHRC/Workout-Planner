@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './styles/Header.css'
 import Title from './Title'
 import AddPlanButton from './AddPlanButton'
-import AddWorkoutPopup from './AddWorkoutPopup'
+import AddWorkoutPopup from './popup-features/AddWorkoutPopup'
 
 
 class Header extends Component {

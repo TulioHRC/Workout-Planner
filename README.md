@@ -6,6 +6,9 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ## Log
 
+### 0.3.1v (Basic exercise plan on Home page)
+- Added each plan created in the home page
+
 ### 0.3v (Basic exercise save)
 - Saving the exercise just in the React logic, but not with any database or cookies
 - Exercise icon in the home page
