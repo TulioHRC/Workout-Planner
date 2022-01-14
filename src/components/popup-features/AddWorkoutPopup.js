@@ -18,7 +18,6 @@ class AddWorkoutPopup extends Component {
             name: e.target.value
         })
     }
-    
 
     render() {
         const { name } = this.state
@@ -31,7 +30,10 @@ class AddWorkoutPopup extends Component {
                     <Form changeHandler={this.nameChange} />
                     <p className='popup-text'>Workouts Series</p>
                     <WorkoutCreation ref={this.SerieRef} />
-                    <button className='popup-btn-create' onClick={() => addFunction(this.SerieRef.current.state, name)}>Create</button>
+                    <button className='popup-btn-create' onClick={() => {
+                        addFunction(this.SerieRef.current.state, name)
+                        closeFunction()
+                    }}>Create</button>
                 </div>
             </div>
         ) : ( <></> )

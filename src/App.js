@@ -15,6 +15,7 @@ class App extends Component {
   
   addPlan = (serie, name) => {
     serie["name"] = name
+    serie["id"] = Number(this.state.plans.length)
 
     this.setState(prevState => ({
         plans: [...prevState.plans, serie]

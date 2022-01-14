@@ -15,10 +15,10 @@ function Exercise(props) {
 
             <input type="text" value={props.name} onChange={props.onChangeName} />
             
-            <div onChange={props.onChangeType}>
-                <input type="radio" name={"type" + props.pos} id='timer' value="Timer" checked={props.type=='Timer'} />
+            <div>
+                <input type="radio" name={"type" + props.pos} id='timer' value="Timer" onChange={props.onChangeType} checked={props.type==='Timer'} />
                 <label htmlFor="timer">Timer</label>
-                <input type="radio" name={"type" + props.pos} id='click' value="Click" checked={props.type=='Click'} />
+                <input type="radio" name={"type" + props.pos} id='click' value="Click" onChange={props.onChangeType} checked={props.type==='Click'} />
                 <label htmlFor="click">Click</label>
             </div>
 

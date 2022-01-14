@@ -12,14 +12,14 @@ class Workouts extends Component {
                 {
                     plans.map((plan) => {
                         return (
-                            <WorkoutArea serie={plan.serie} count={plan.count} name={plan.name} />
+                            <WorkoutArea serie={plan.serie} count={plan.count} name={plan.name} key={plan.id} />
                         )
                     })
                 }
             </div>
         ) : (
             <div className='workouts'>
-                <img src="Workouts image.png" alt="Image: Create your first workout plan" />
+                <img src="Workouts image.png" alt="Create your first workout plan" />
             </div>
         )
     }
