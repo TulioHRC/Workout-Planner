@@ -26,7 +26,7 @@ export class WorkoutArea extends Component {
                     {name}
                     <button onClick={this.viewWorkout}>Start</button>
                 </div>
-                <WorkoutPopup view={this.state.popupView} serie={serie} closeFunction={this.viewWorkout} />
+                <WorkoutPopup view={this.state.popupView} serie={serie} count={count} closeFunction={this.viewWorkout} />
             </>
         )
     }

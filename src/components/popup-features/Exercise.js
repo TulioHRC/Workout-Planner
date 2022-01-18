@@ -3,10 +3,10 @@ import React from 'react'
 function Exercise(props) {
     let numInput = props.type === 'Timer' ? <div>
         <label htmlFor="numInput">Seconds:</label>
-        <input type="number" id='numInput' min='1' max='99999' step='5' />
+        <input type="number" id='numInput' min='1' max='99999' step='5' onChange={props.onChangeTimes} />
     </div> : <div>
         <label htmlFor="numInput">Quantity:</label>
-        <input type="number" id='numInput' min='1' />
+        <input type="number" id='numInput' min='1' onChange={props.onChangeTimes} />
     </div>
 
     return (

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/AddWorkoutPopup.css'
+import CountExercise from './CountExercise'
+import TimerExercise from './TimerExercise'
 
 class WorkoutPopup extends Component {
     constructor(props) {
@@ -11,7 +13,7 @@ class WorkoutPopup extends Component {
         }
     }
 
-    timer = (time) => { // Timer function
+    timer = (time) => { // Initial Timer function
         if(time >= 0){
             this.setState(prevState => ({
                 actualPage: <>{time}</>,
@@ -19,19 +21,43 @@ class WorkoutPopup extends Component {
             }))
             setTimeout(() => this.timer(time-1), 1000)
         } else {
-            this.setState(prevState => ({
-                actualPage: <></>,
-                pos: prevState.pos+1
-            }), () => this.nextPos())
+            this.nextPos()
         }
     }
 
     nextPos = () => { // Next Exercise
         this.setState(prevState => ({
-            actualPage: prevState.actualPage,
+            actualPage: <></>,
             pos: prevState.pos+1
         }), () => {
-            console.log(this.props.serie[this.state.pos-1])
+            console.log(this.state.pos)
+            console.log(this.props.count)
+            if(this.state.pos <= this.props.count) {     
+                this.nextExercise = this.props.serie[this.state.pos-1]
+                console.log(this.nextExercise)
+                if(this.nextExercise.type === 'Timer'){ // ### Add numbers of seconds or times 
+                    this.setState(prevState => ({
+                        actualPage: <TimerExercise 
+                                        name={this.nextExercise.name} 
+                                        color={this.nextExercise.color} 
+                                        time={this.nextExercise.times}
+                                        nextPos={this.nextPos}
+                                    />,
+                        pos: prevState.pos
+                    }))
+                } else {
+                    this.setState(prevState => ({
+                        actualPage: <CountExercise 
+                                        name={this.nextExercise.name} 
+                                        color={this.nextExercise.color} 
+                                        times={this.nextExercise.times} 
+                                        nextPos={this.nextPos}
+                                    />,
+                        pos: prevState.pos
+                    }))
+                }
+            }
+            
         })
     }
 

@@ -18,6 +18,7 @@ class WorkoutCreation extends Component {
                 name: 'Exercise',
                 color: 'gray',
                 type: 'Timer',
+                times: '',
                 position: prevState.count+1
             }],
             count: prevState.count+1
@@ -31,6 +32,7 @@ class WorkoutCreation extends Component {
                             name: e.target.value,
                             color: prevState.serie.slice(key-1, key)[0].color,
                             type: prevState.serie.slice(key-1, key)[0].type,
+                            times: prevState.serie.slice(key-1, key)[0].times,
                             position: key
                         },
                         ...prevState.serie.slice(key)],
@@ -45,6 +47,7 @@ class WorkoutCreation extends Component {
                             name: prevState.serie.slice(key-1, key)[0].name, 
                             color: e.target.value, 
                             type: prevState.serie.slice(key-1, key)[0].type, 
+                            times: prevState.serie.slice(key-1, key)[0].times,
                             position: key
                         },
                         ...prevState.serie.slice(key)],
@@ -58,7 +61,23 @@ class WorkoutCreation extends Component {
                         { 
                             name: prevState.serie.slice(key-1, key)[0].name, 
                             color: prevState.serie.slice(key-1, key)[0].color, 
-                            type: e.target.value, 
+                            type: e.target.value,
+                            times: prevState.serie.slice(key-1, key)[0].times,
+                            position: key
+                        },
+                        ...prevState.serie.slice(key)],
+            count: prevState.count
+        }))
+    }
+
+    changeTimesHandler = (e, key) => {
+        this.setState((prevState) => ({
+            serie: [...prevState.serie.slice(0,key-1), 
+                        { 
+                            name: prevState.serie.slice(key-1, key)[0].name, 
+                            color: prevState.serie.slice(key-1, key)[0].color, 
+                            type: prevState.serie.slice(key-1, key)[0].type,
+                            times: e.target.value,
                             position: key
                         },
                         ...prevState.serie.slice(key)],
@@ -82,6 +101,7 @@ class WorkoutCreation extends Component {
                                     onChangeName={(e) => this.changeNameHandler(e, workout.position)} 
                                     onChangeColor={(e) => this.changeColorHandler(e, workout.position)}
                                     onChangeType={(e) => this.changeTypeHandler(e, workout.position)}
+                                    onChangeTimes = {(e) => this.changeTimesHandler(e, workout.position)}
                                     key={workout.position} 
                                 />
                         // put the exercise component here

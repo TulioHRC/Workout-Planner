@@ -6,6 +6,11 @@ Basically, this will be firstly a site, that will let you create workout session
 
 ## Log
 
+### 0.4v (Basic Exercise plan play)
+- Logic Structure (type, times, etc.)
+- Time running
+- Initial timer (3 seconds)
+
 ### 0.3.1v (Basic exercise plan on Home page)
 - Added each plan created in the home page
 
