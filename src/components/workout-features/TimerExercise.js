@@ -27,9 +27,8 @@ class TimerExercise extends Component {
 
     render() {
         return (
-            <div>
-                {this.props.name}
-                {this.props.color}
+            <div className='exercise' style={{background: this.props.color}}>
+                <p>{this.props.name}</p>
                 {this.state.time}
             </div>
         )

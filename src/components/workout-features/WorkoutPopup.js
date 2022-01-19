@@ -16,7 +16,7 @@ class WorkoutPopup extends Component {
     timer = (time) => { // Initial Timer function
         if(time >= 0){
             this.setState(prevState => ({
-                actualPage: <>{time}</>,
+                actualPage: <p className='popup-exercise-initial'>{time}</p>,
                 pos: prevState.pos
             }))
             setTimeout(() => this.timer(time-1), 1000)
@@ -56,6 +56,14 @@ class WorkoutPopup extends Component {
                         pos: prevState.pos
                     }))
                 }
+            } else { // ended
+                this.setState(prevState => ({
+                    actualPage: <div className='popup-exercise-end'>
+                                    <p>Ended</p>
+                                    <button onClick={this.componentDidMount}>Retry</button>
+                                </div>,
+                    pos: 0
+                }))
             }
             
         })
