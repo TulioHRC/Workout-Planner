@@ -18,7 +18,7 @@ class Workouts extends Component {
                 }
             </div>
         ) : (
-            <div className='workouts'>
+            <div className='workout-image'>
                 <img src="Workouts image.png" alt="Create your first workout plan" />
             </div>
         )

@@ -6,7 +6,7 @@ class Form extends Component {
 
         return (
             <div className='popup-form'>
-                <input className='popup-form-input' type="text" minLength="3" maxLength="20" placeholder='Workout plan name' onChange={(e) => changeHandler(e)} />
+                <input className='popup-form-input' type="text" minLength="3" maxLength="15" placeholder='Workout plan name' onChange={(e) => changeHandler(e)} />
             </div>
         )
     }

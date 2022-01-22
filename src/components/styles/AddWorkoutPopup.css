@@ -142,25 +142,3 @@
     position: relative;
     left: 12.5%;
 }
-
-.popup-exercise-initial {
-    position: absolute;
-    left: 5%;
-    top: 15%;
-}
-
-.exercise {
-    position: absolute;
-    left: 5%;
-    top: 15%;
-}
-
-.exercise p {
-    font-size: 28px;
-}
-
-.popup-exercise-end {
-    position: absolute;
-    left: 5%;
-    top: 15%;
-}

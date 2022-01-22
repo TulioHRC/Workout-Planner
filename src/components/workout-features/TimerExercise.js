@@ -27,9 +27,9 @@ class TimerExercise extends Component {
 
     render() {
         return (
-            <div className='exercise' style={{background: this.props.color}}>
-                <p>{this.props.name}</p>
-                {this.state.time}
+            <div className='popup-exercise-screen' style={{background: this.props.color}}>
+                <p className='popup-exercise-screen-name'>{this.props.name}</p>
+                <p className='popup-exercise-screen-time'>{this.state.time}</p>
             </div>
         )
     }

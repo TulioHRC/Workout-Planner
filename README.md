@@ -4,12 +4,26 @@ This project will be a way to practice my ReactJS study, after the course I did 
 
 Basically, this will be firstly a site, that will let you create workout sessions, and then you can use them, using timers or something like that. And the site will use ReactJS, so it'll be a SPW (Single-Page-Website) and in the future can be a SPA (Single-Page-Application), when I learn React Native or maybe Flutter.
 
+## Future Updates
+- Pause button while running the exercise plan
+- Save plans to access after (BackEnd)
+- Sounds
+- Bootstrap CSS
+
 ## Log
+
+### 0.5 (CSS exercise run popup)
+- Exercises area in the home page
+- Initial timer Styling
+- Exercises style
+- Final "exercise" style
+- Count times on CountExercise
 
 ### 0.4.1v (Count exercise run)
 - Count exercise running
 - End page
 - Retry option
+- Ended logical part
 
 ### 0.4v (Basic Exercise plan play)
 - Logic Structure (type, times, etc.)
